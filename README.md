@@ -4,17 +4,17 @@ A Vue3 starter, powered by Vite and using Tailwind as Css.
 
 ## Documentation
 
-### Vite
+### ⚡️ Vite
 
 Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects
 [Docs](https://vitejs.dev/guide/)
 
-### Vue
+### 🪄 Vue
 
 Vue is a progressive framework for building user interfaces.
 [Docs](https://v3.vuejs.org/guide/introduction.html)
 
-### Tailwind
+### 🎨 Tailwind
 
 A utility-first CSS framework packed with classes.
 [Docs](https://tailwindcss.com/docs)
