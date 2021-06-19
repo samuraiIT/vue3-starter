@@ -1,7 +1,7 @@
 import { createApp } from "vue";
-import router from "./router/router";
-import "./tailwind.css";
-import App from "./App.vue";
-import i18n from "./i18n/index.js";
+import router from "/@/router/router";
+import "/@/tailwind.css";
+import App from "/@/App.vue";
+import i18n from "/@/i18n/i18n";
 
 createApp(App).use(i18n).use(router).mount("#app");
