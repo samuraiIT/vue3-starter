@@ -9,26 +9,26 @@ const router = createRouter({
     {
       path: "/",
       name: "Home-en",
-      component: () => import("../views/Home.vue"),
+      component: () => import("/@/views/Home.vue"),
       meta: { lang: "en" },
     },
     {
       path: "/fr",
       name: "Home-fr",
-      component: () => import("../views/Home.vue"),
+      component: () => import("/@/views/Home.vue"),
       meta: { lang: "fr" },
     },
     {
       path: "/about",
       name: "About-en",
       meta: { lang: "en" },
-      component: () => import("../views/About.vue"),
+      component: () => import("/@/views/About.vue"),
     },
     {
       path: "/a-propos",
       name: "About-fr",
       meta: { lang: "fr" },
-      component: () => import("../views/About.vue"),
+      component: () => import("/@/views/About.vue"),
     },
   ],
 });
