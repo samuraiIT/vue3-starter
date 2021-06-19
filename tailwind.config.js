@@ -10,7 +10,16 @@ module.exports = {
   purge: ["./index.html", "./src/**/*.{vue,js}"], // purge class from index.html and all vue.js files
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      // declare custom tailwind class (brand)
+      colors: {
+        brand: {
+          DEFAULT: "#FDB035",
+          light: "#FDC05D",
+          dark: "#F29602",
+        },
+      },
+    },
   },
   variants: {
     extend: {
