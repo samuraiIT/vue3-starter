@@ -24,7 +24,7 @@ A utility-first CSS framework packed with classes.
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/maximedaraize/vue3-starter.git
 ```
 
 Go to the project directory
