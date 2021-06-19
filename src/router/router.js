@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import store from "../store";
-import i18n from "../i18n";
+import i18n from "/@/i18n/i18n";
 
 const history = createWebHistory();
 const router = createRouter({
