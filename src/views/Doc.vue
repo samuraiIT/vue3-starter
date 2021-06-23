@@ -1,13 +1,13 @@
 <template>
-  <h1>About!! PAGE</h1>
+    <h1>{{ $t('doc') }}</h1>
 </template>
 
 <script>
 export default {
-  setup() {
-    return {};
-  },
-};
+    setup() {
+        return {}
+    },
+}
 </script>
 
 <style scoped></style>
