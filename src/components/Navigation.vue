@@ -1,44 +1,51 @@
 <template>
-  <h1 class="text-4xl">{{ route.meta.lang }}</h1>
-  <button @click="langSwitch()">{{ lang }}</button>
-  <router-link :to="{ name: `Home-${lang}` }">Home</router-link>
-  <router-link :to="{ name: `About-${lang}` }">About</router-link>
+    <div class="locale-changer">
+        <router-link :to="switchTo('fr')">Francais </router-link>
+        <router-link :to="switchTo('en')">English </router-link>
+        <router-link :to="{ name: `Home-${lang}` }">Home</router-link>
+        <router-link :to="{ name: `Doc-${lang}` }">Documentation</router-link>
+    </div>
 </template>
 
 <script>
-import { ref, watch } from "vue";
-import { useRoute } from "vue-router";
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
+
 export default {
-  setup() {
-    const route = useRoute();
-    const lang = ref("en");
+    setup() {
+        const route = useRoute()
+        const lang = ref('en') //default lang of the site
 
-    const langSwitch = () => {
-      if (route.meta.lang === "en") {
-        route.meta.lang = "fr";
-        lang.value = "fr";
-      } else if (route.meta.lang === "fr") {
-        route.meta.lang = "en";
-        lang.value = "en";
-      }
-      console.log(route.meta.lang);
-    };
+        /**
+         * Set the value of lang accordingly
+         * to the meta value of the route
+         * Possible lang (fr,en)
+         */
+        watch(route, () => {
+            if (route.meta.lang !== 'en') {
+                lang.value = 'fr'
+            } else {
+                lang.value = 'en'
+            }
+        })
 
-    watch(route, (value) => {
-      if (route.meta.lang === "fr") {
-        lang.value = "fr";
-      } else {
-        lang.value = "en";
-      }
-    });
-    return { route, lang, langSwitch };
-  },
-};
+        const switchTo = lang => {
+            const routeName = route.name
+            if (routeName) {
+                const name = routeName.split('-')[0] // strip '-lang' from routeName.
+                return name ? { name: `${name}-${lang}` } : null
+            }
+            return {}
+        }
+
+        return { route, switchTo, lang }
+    },
+}
 </script>
 
 <style scoped>
 a {
-  display: inline-block;
-  margin: 0 1rem 2rem;
+    display: inline-block;
+    margin: 0 1rem 2rem;
 }
 </style>
