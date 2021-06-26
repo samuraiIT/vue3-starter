@@ -1,10 +1,31 @@
 <template>
-    <div class="locale-changer">
-        <router-link :to="switchTo('fr')">Francais </router-link>
-        <router-link :to="switchTo('en')">English </router-link>
-        <router-link :to="{ name: `Home-${lang}` }">Home</router-link>
-        <router-link :to="{ name: `Doc-${lang}` }">Documentation</router-link>
-    </div>
+    <header class="bg-gray-50 border-b flex flex-wrap items-center justify-center p-5">
+        <nav>
+            <router-link :to="{ name: `Home-${lang}` }">Home</router-link>
+            <router-link :to="{ name: `About-${lang}` }">About</router-link>
+            <router-link :to="{ name: `Blog-${lang}` }">Blog</router-link>
+        </nav>
+        <div class="lang-switcher" v-if="route.meta.lang === 'en'">
+            <router-link
+                :to="switchTo('fr')"
+                class="active"
+                lang="fr"
+                hreflang="fr"
+                @click="toggleLang()"
+                >Francais
+            </router-link>
+        </div>
+        <div class="lang-switcher" v-else>
+            <router-link
+                :to="switchTo('en')"
+                class="active"
+                lang="en"
+                hreflang="en"
+                @click="toggleLang()"
+                >English
+            </router-link>
+        </div>
+    </header>
 </template>
 
 <script>
@@ -15,6 +36,7 @@ export default {
     setup() {
         const route = useRoute()
         const lang = ref('en') //default lang of the site
+        const active = ref(true)
 
         /**
          * Set the value of lang accordingly
@@ -38,14 +60,49 @@ export default {
             return {}
         }
 
-        return { route, switchTo, lang }
+        const toggleLang = () => {
+            active.value = !active.value
+        }
+        return { route, switchTo, lang, active, toggleLang }
     },
 }
 </script>
 
 <style scoped>
-a {
+header a {
+    /* padding-right: 1rem; */
+    font-weight: 500;
+}
+
+nav {
+    width: 800px;
+}
+
+nav a {
     display: inline-block;
-    margin: 0 1rem 2rem;
+    padding: 0.25rem 1rem;
+    width: 25%;
+    border-radius: 4px;
+    line-height: 1.75;
+    margin: 0 0.25rem;
+    transition: 0.21s;
+}
+
+nav a.router-link-active,
+nav a:hover {
+    @apply bg-gray-300;
+}
+
+.lang-switcher {
+    position: absolute;
+    right: 2rem;
+}
+
+.lang-switcher a {
+    display: none;
+}
+
+.lang-switcher a.active {
+    display: block;
 }
 </style>
