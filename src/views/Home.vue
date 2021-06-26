@@ -1,6 +1,7 @@
 <template>
-    <h1>{{ $t('home') }}</h1>
-    <Buttons msg="Welcome to Vite & Vue3 Starter" />
+    <main>
+        <Buttons />
+    </main>
 </template>
 
 <script>
