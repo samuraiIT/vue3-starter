@@ -12,40 +12,12 @@
 </template>
 
 <script>
-import { ref, computed, onMounted, watch } from 'vue'
-import { useRoute } from 'vue-router'
-import data from '../data/data.js'
+import { useLang } from '/@/composable/useLang'
 export default {
     setup() {
-        const route = useRoute()
+        const { route, data, dataEn, dataFr, lang } = useLang()
 
-        onMounted(() => {
-            let data = async () => ref(data)
-        })
-
-        const dataEn = computed(function () {
-            return data.en.filter(item => item.id == route.params.id)
-        })
-        const dataFr = computed(function () {
-            return data.fr.filter(item => item.id == route.params.id)
-        })
-
-        // init data
-        if (route.meta.lang === 'en') {
-            data.value = dataEn.value
-        } else {
-            data.value = dataFr.value
-        }
-        // })
-        watch(route, () => {
-            if (route.meta.lang === 'en') {
-                data.value = dataEn.value
-            } else {
-                data.value = dataFr.value
-            }
-        })
-
-        return { route, data, dataEn, dataFr }
+        return { route, data, dataEn, dataFr, lang }
     },
 }
 </script>
