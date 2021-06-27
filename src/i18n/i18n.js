@@ -1,15 +1,15 @@
-import { createI18n } from "vue-i18n";
+import { createI18n } from 'vue-i18n'
 
-import en from "./en.json";
-import fr from "./fr.json";
+import en from './en.json'
+import fr from './fr.json'
 
 const messages = {
-  en,
-  fr,
-};
+    en,
+    fr,
+}
 
 export default createI18n({
-  locale: "en",
-  messages,
-  silentTranslationWarn: true,
-});
+    locale: 'en',
+    messages,
+    silentTranslationWarn: true,
+})
