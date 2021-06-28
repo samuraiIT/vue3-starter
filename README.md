@@ -1,6 +1,6 @@
 # Vue3 Starter
 
-A Vue3 starter, powered by Vite and using Tailwind as Css.
+A Vue3 starter, powered by Vite and using Tailwind, I18n and Vue-router
 
 ## Documentation
 
