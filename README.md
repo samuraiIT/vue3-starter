@@ -1,8 +1,14 @@
 # Vue3 Starter
 
+---
+
+**:warning: Note this is early WIP! Currently focus on making vue3-starter stable and on writting a thorough documentation.**
+
+---
+
 A Vue3 starter, powered by Vite and using Tailwind, I18n and Vue-router
 
-## Documentation
+## What's in Vue3-Starter
 
 ### ⚡️ Vite
 
@@ -19,40 +25,62 @@ Vue is a progressive framework for building user interfaces.
 A utility-first CSS framework packed with classes.
 [Docs](https://tailwindcss.com/docs)
 
-## Run Locally
+## Install the starter
 
-Clone the project
+To install vue3-starter you can download or clone the repo on github or install it via your favorite package manager.
+
+### Clone the repo
 
 ```bash
   git clone https://github.com/maximedaraize/vue3-starter.git
 ```
 
-Go to the project directory
+### Install the package
 
 ```bash
-  cd my-project
+ #NPM
+  npm install vue3-starter
+
+ #YARN
+  yarn add vue3-starter
 ```
 
-Install dependencies
+### Install depedencies
 
 ```bash
+#NPM
   npm install
+
+#YARN
+  yarn
 ```
 
-Start the dev server
+### Start the dev server
 
 ```bash
+#NPM
   npm run dev
+
+#Yarn
+  yarn dev
 ```
 
-Build for production
+### Build for production
 
 ```bash
+#NPM
   npm run build
+
+#Yarn
+  yarn build
 ```
 
-Locally preview production build
+### Locally preview production build
 
 ```bash
+#NPM
   npm run serve
+
+#Yarn
+  yarn serve
 ```
