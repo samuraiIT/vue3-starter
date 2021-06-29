@@ -1,7 +1,7 @@
 {
   "name": "vue3-starter",
   "description": "",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "authors": {
     "name": "Maxime Daraize",
     "email": "maxime.daraize@gmail.com"
@@ -10,7 +10,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "postinstall": "rsync -r --exclude=postinstall.js ../vue3-starter/* $INIT_CWD && node postinstall.js"
+    "postinstall": "rsync -r --exclude=postinstall.js ../vue3-starter/* $INIT_CWD --silent && node postinstall.js --silent "
   },
   "dependencies": {
     "vue": "^3.1.1",
@@ -24,8 +24,7 @@
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.2",
-    "vite": "^2.3.8",
-    "vue3-starter": "^0.3.1"
+    "vite": "^2.3.8"
   },
   "license": "MIT"
 }
