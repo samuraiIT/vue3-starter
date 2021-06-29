@@ -1,3 +1,8 @@
+# Add a new tag corresponding 
+# to the mention in the commit
+# when there is a push to the
+# branch 'main'
+#EX: 'major', 'minor', 'patch'
 name: Bump version
 on:
   push:

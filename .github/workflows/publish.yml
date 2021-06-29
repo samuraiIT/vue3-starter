@@ -1,3 +1,6 @@
+# Publish to the package to NPM 
+# when there is a merge or push 
+# to the branch 'main'
 name: publish
 on:
   push:

@@ -1,4 +1,4 @@
-# V.V.I.T.R
+# VUE3 STARTER
 
 ---
 
