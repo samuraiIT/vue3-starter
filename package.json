@@ -10,7 +10,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "postinstall": "rsync -r --exclude=postinstall.js ../vue3-starter/* $INIT_CWD && node postinstall.js"
+    "postinstall": "rsync -r --exclude=postinstall.js ../vue3-starter/* $INIT_CWD --silent && node postinstall.js --silent "
   },
   "dependencies": {
     "vue": "^3.1.1",
@@ -25,7 +25,6 @@
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.2",
     "vite": "^2.3.8",
-    "vue3-starter": "^0.3.1"
   },
   "license": "MIT"
 }
