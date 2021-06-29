@@ -25,17 +25,7 @@ Vue is a progressive framework for building user interfaces.
 A utility-first CSS framework packed with classes.
 [Docs](https://tailwindcss.com/docs)
 
-## Install the starter
-
-To install vue3-starter you can download or clone the repo on github or install it via your favorite package manager.
-
-### Clone the repo
-
-```bash
-  git clone https://github.com/maximedaraize/vue3-starter.git
-```
-
-### Install the package
+## Installation
 
 ```bash
  #NPM
