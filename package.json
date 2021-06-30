@@ -1,16 +1,19 @@
 {
   "name": "vue3-starter",
   "description": "",
-  "version": "0.4.1",
+  "version": "0.6.2",
   "authors": {
-    "name": "Maxime Daraize",
-    "email": "maxime.daraize@gmail.com"
+    "name": "Maxime Daraize"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maximedaraize/vue3-starter"
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "postinstall": "rsync -r --exclude=postinstall.js ../vue3-starter/* $INIT_CWD --silent && node postinstall.js --silent "
+    "postinstall": "node postinstall.js"
   },
   "dependencies": {
     "vue": "^3.1.1",
