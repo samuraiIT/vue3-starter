@@ -8,6 +8,9 @@
 
 A Vue3 starter, powered by Vite and using Tailwind, I18n and Vue-router.
 
+## [Demo](https://vue3-starter.netlify.app)
+
+
 
 ## Installation
 
