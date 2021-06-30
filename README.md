@@ -14,38 +14,22 @@ A Vue3 starter, powered by Vite and using Tailwind, I18n and Vue-router.
 
 ## Installation
 
-```bash
- #NPM
-  npm init -y
-  npm install vue3-starter
+```sh
+npx degit maximedaraize/vue3-starter app
+cd app
 
 ```
 
-### Install depedencies
+### NPM
 
-```bash
-#NPM
-  npm install
-```
-
-### Start the dev server
-
-```bash
-#NPM
+```sh
+  npm i
   npm run dev
-
 ```
 
-### Build for production
+### YARM
 
-```bash
-#NPM
-  npm run build
-```
-
-### Locally preview production build
-
-```bash
-#NPM
-  npm run serve
+```sh
+  yarn
+  yarn dev
 ```
