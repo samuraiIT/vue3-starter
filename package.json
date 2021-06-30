@@ -1,6 +1,6 @@
 {
   "name": "vue3-starter",
-  "description": "",
+  "description": "A Vue3 starter, powered by Vite and using Tailwind, I18n and Vue-router.",
   "version": "0.6.13",
   "authors": {
     "name": "Maxime Daraize"
