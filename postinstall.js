@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 
 async function copyFiles() {
   try {
-    await fs.copy('../vue3-starter/*', '../../vue3-starter', {
+    await fs.copy('../vue3-starter', '../../vue3-starter', {
       overwrite: true,
       errorOnExist: true,
     });
