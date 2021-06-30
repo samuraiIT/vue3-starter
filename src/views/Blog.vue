@@ -1,7 +1,5 @@
 <template>
     <main>
-        {{ lang }} <br />
-        {{ route.params }}
         <p v-for="post in data.value" :key="post">
             <router-link :to="{ name: `BlogDetail-${lang}`, params: { id: post.id } }">{{
                 post.title
@@ -22,9 +20,8 @@ export default {
 </script>
 
 <style scoped>
-a {
+a { font-size: 2rem;
     display: block;
-    border: 3px solid red;
     position: relative;
 }
 </style>

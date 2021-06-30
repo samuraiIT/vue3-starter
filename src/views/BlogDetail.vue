@@ -6,7 +6,7 @@
         </p>
 
         <button class="bg-brand p-3 rounded text-white font-bold mt-4" @click="$router.go(-1)">
-            Back
+            {{$t('button.back')}}
         </button>
     </main>
 </template>

@@ -1,5 +1,19 @@
 {
     "welcome": "Bonjour",
     "home": "Page accueil",
-    "doc": "Documentation - FR"
+    "doc": "Documentation - FR",
+    "header": {
+        "home": "Accueil",
+        "about": "À propos",
+        "blog":  "Blogue"
+    },
+    "button": {
+        "back": "Retour",
+        "increase": "Augmenter le total par",
+        "decrease": "Diminuer le total par"
+    },
+    "about": {
+        "text1":  "Ceci est un exemple de 'route'. Vous pouvez changer de langue en utilisant le lien langue dans le 'eader'. Cela changera le chemin de l'URL et traduira le contenu dans la langue appropriée.",
+        "text2": "Allez dans l'onglet blog voir l'exemple de routage dynamique."
+      }
 }

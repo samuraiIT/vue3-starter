@@ -1,8 +1,8 @@
 <template>
     <h1 class="text-4xl mb-3">{{ msg }}</h1>
-    <button @click="increment()" class="button">Increase total by 1</button>
+    <button @click="increment()" class="button">{{$t('button.increase')}} 1</button>
     <button @click="decrement()" class="button" style="background: #ffcd2a">
-        Decrease total by 1
+       {{$t('button.increase')}} 1
     </button>
     <br />
     <span class="count">Total: {{ count }}</span>

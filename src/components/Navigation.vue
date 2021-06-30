@@ -1,9 +1,9 @@
 <template>
     <header class="bg-gray-50 border-b flex flex-wrap items-center justify-center p-5">
         <nav>
-            <router-link :to="{ name: `Home-${lang}` }">Home</router-link>
-            <router-link :to="{ name: `About-${lang}` }">About</router-link>
-            <router-link :to="{ name: `Blog-${lang}` }">Blog</router-link>
+            <router-link :to="{ name: `Home-${lang}` }">{{$t('header.home')}}</router-link>
+            <router-link :to="{ name: `About-${lang}` }">{{$t('header.about')}}</router-link>
+            <router-link :to="{ name: `Blog-${lang}` }">{{$t('header.blog')}}</router-link>
         </nav>
         <div class="lang-switcher" v-if="route.meta.lang === 'en'">
             <router-link

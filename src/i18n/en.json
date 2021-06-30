@@ -1,5 +1,19 @@
 {
     "welcome": "Bonjour",
     "home": "Home page",
-    "doc": "Documentation - EN"
+    "doc": "Documentation - EN",
+    "header": {
+        "home": "Home",
+        "about": "About",
+        "blog":  "Blog"
+    },
+    "button": {
+        "back": "Back",
+        "increase": "Increase total by",
+        "decrease": "Decrease total by"
+    },
+    "about": {
+      "text1":  "This is a example of a working route. You can toggle the language using the lang link. Doing so, will change the url path and translate the content to the appropriatelanguage.",
+      "text2": "Go to the blog tab the see example of dynamic routing."
+    }
 }
