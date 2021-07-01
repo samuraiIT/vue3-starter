@@ -1,7 +1,7 @@
 {
   "name": "vue3-starter",
   "description": "A Vue3 starter, powered by Vite and using Tailwind, I18n and Vue-router.",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "authors": {
     "name": "Maxime Daraize"
   },
@@ -25,6 +25,7 @@
     "@vue/compiler-sfc": "^3.1.1",
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",
+    "sass": "^1.35.1",
     "tailwindcss": "^2.2.2",
     "vite": "^2.3.8"
   },
