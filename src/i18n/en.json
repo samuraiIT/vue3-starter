@@ -9,11 +9,19 @@
     },
     "button": {
         "back": "Back",
+        "readMore": "Read more",
         "increase": "Increase total by",
         "decrease": "Decrease total by"
     },
     "about": {
-      "text1":  "This is a example of a working route. You can toggle the language using the lang link. Doing so, will change the url path and translate the content to the appropriatelanguage.",
-      "text2": "Go to the blog tab the see example of dynamic routing."
+      "title": "What is Vue3-Starter",
+      "text":  "This starter use vite, vuejs, tailwind, and tools like: Vue-I18n and Vue-Router. This starter is made to ease the complexity of starting a new Vuejs application. To learn more about the technologies behind this starter, take a look at the officials docuemantion below.",
+      "docs": {
+          "vite": "https://vitejs.dev/guide/",
+          "vuejs": "https://vuejs.org/",
+          "tailwind": "https://tailwindcss.com/docs",
+          "vueI18n": "https://kazupon.github.io/vue-i18n/introduction.html",
+          "vueRouter": "https://router.vuejs.org/installation.html"
+      }
     }
 }

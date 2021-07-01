@@ -1,12 +1,25 @@
 <template>
     <main>
-        <h1 class="text-3xl">{{ data.value[0].title }}</h1>
-        <p>
+        <div class="hero">
+            <img :src="data.value[0].img" class="object-cover object-bottom h-80 w-full" />
+        </div>
+        <h1 class="text-6xl mt-8">{{ data.value[0].city }}</h1>
+        <p class="mt-8 text-left">
             {{ data.value[0].description }}
         </p>
 
-        <button class="bg-brand p-3 rounded text-white font-bold mt-4" @click="$router.go(-1)">
-            {{$t('button.back')}}
+        <ul class="text-left mt-8">
+            <li><span class="text-xl font-bold">Area</span>: {{ data.value[0].area }}</li>
+            <li>
+                <span class="text-xl font-bold">Population</span>: {{ data.value[0].population }}
+            </li>
+        </ul>
+
+        <button
+            class="block bg-black px-6 py-3 rounded text-white font-bold mt-4"
+            @click="$router.go(-1)"
+        >
+            {{ $t('button.back') }}
         </button>
     </main>
 </template>

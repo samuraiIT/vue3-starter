@@ -42,13 +42,13 @@ const router = createRouter({
             component: () => import('/@/views/Blog.vue'),
         },
         {
-            path: '/blog/:id',
+            path: '/blog/:slug',
             name: 'BlogDetail-en',
             meta: { lang: 'en' },
             component: () => import('/@/views/BlogDetail.vue'),
         },
         {
-            path: '/fr/blogue/:id',
+            path: '/fr/blogue/:slug',
             name: 'BlogDetail-fr',
             meta: { lang: 'fr' },
             component: () => import('/@/views/BlogDetail.vue'),

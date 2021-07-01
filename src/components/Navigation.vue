@@ -1,9 +1,9 @@
 <template>
     <header class="bg-gray-50 border-b flex flex-wrap items-center justify-center p-5">
         <nav>
-            <router-link :to="{ name: `Home-${lang}` }">{{$t('header.home')}}</router-link>
-            <router-link :to="{ name: `About-${lang}` }">{{$t('header.about')}}</router-link>
-            <router-link :to="{ name: `Blog-${lang}` }">{{$t('header.blog')}}</router-link>
+            <router-link :to="{ name: `Home-${lang}` }">{{ $t('header.home') }}</router-link>
+            <router-link :to="{ name: `About-${lang}` }">{{ $t('header.about') }}</router-link>
+            <router-link :to="{ name: `Blog-${lang}` }">{{ $t('header.blog') }}</router-link>
         </nav>
         <div class="lang-switcher" v-if="route.meta.lang === 'en'">
             <router-link
@@ -12,7 +12,7 @@
                 lang="fr"
                 hreflang="fr"
                 @click="toggleLang()"
-                >Francais
+                >Fr
             </router-link>
         </div>
         <div class="lang-switcher" v-else>
@@ -22,7 +22,7 @@
                 lang="en"
                 hreflang="en"
                 @click="toggleLang()"
-                >English
+                >En
             </router-link>
         </div>
     </header>
@@ -68,14 +68,21 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+header {
+    padding-top: 4rem;
+}
+
 header a {
-    /* padding-right: 1rem; */
     font-weight: 500;
 }
 
 nav {
     width: 800px;
+    @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 nav a {
@@ -86,6 +93,10 @@ nav a {
     line-height: 1.75;
     margin: 0 0.25rem;
     transition: 0.21s;
+    @media (max-width: 600px) {
+        width: 100%;
+        margin-bottom: 0.8rem;
+    }
 }
 
 nav a.router-link-active,
@@ -96,6 +107,9 @@ nav a:hover {
 .lang-switcher {
     position: absolute;
     right: 2rem;
+    @media (max-width: 600px) {
+        top: 1.5rem;
+    }
 }
 
 .lang-switcher a {
