@@ -18,18 +18,18 @@ export function useLang() {
     /**
      * Replace data with computed property
      * based on the language and if there
-     * is a parameter 'id' in the route
+     * is a parameter 'slug' in the route
      */
     const dataEn = computed(function () {
-        if (route.params.id !== undefined) {
-            return data.en.filter(item => item.id == route.params.id)
+        if (route.params.slug !== undefined) {
+            return data.en.filter(item => item.slug == route.params.slug)
         } else {
             return data.en
         }
     })
     const dataFr = computed(function () {
-        if (route.params.id !== undefined) {
-            return data.fr.filter(item => item.id == route.params.id)
+        if (route.params.slug !== undefined) {
+            return data.fr.filter(item => item.slug == route.params.slug)
         } else {
             return data.fr
         }
