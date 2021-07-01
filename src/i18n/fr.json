@@ -9,11 +9,19 @@
     },
     "button": {
         "back": "Retour",
+        "readMore": "En savoir plus",
         "increase": "Augmenter le total par",
         "decrease": "Diminuer le total par"
     },
     "about": {
-        "text1":  "Ceci est un exemple de 'route'. Vous pouvez changer de langue en utilisant le lien langue dans le 'eader'. Cela changera le chemin de l'URL et traduira le contenu dans la langue appropriée.",
-        "text2": "Allez dans l'onglet blog voir l'exemple de routage dynamique."
+      "title": "Qu'est ce Vue3-Starter",
+      "text":  "Ce démarreur utilise vite, vuejs, tailwind et des outils tels que: Vue-I18n et Vue-Router. Ce démarreur est conçu pour faciliter le démarrage d'une nouvelle application Vuejs. Pour en savoir plus sur les technologies derrière ce démarreur , jetez un œil à la documentation officielle ci-dessous.",
+      "docs": {
+          "vite": "https://vitejs.dev/guide/",
+          "vuejs": "https://vuejs.org/",
+          "tailwind": "https://tailwindcss.com/docs",
+          "vueI18n": "https://kazupon.github.io/vue-i18n/introduction.html",
+          "vueRouter": "https://router.vuejs.org/installation.html"
       }
+    }
 }
