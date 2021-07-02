@@ -26,10 +26,11 @@
                         </div>
                         <router-link
                             :to="{ name: `BlogDetail-${lang}`, params: { slug: post.slug } }"
-                            class="inline-block h-12 rounded-md mt-6 px-4 py-3 bg-black text-white"
-                            type="submit"
+                            class="inline-block h-12 rounded-md mt-6 px-4 py-3 bg-black text-white font-bold"
+                           
                         >
-                            {{ $t('button.readMore') }}
+                   {{ $t('button.readMore') }}
+                           
                         </router-link>
                     </div>
                 </form>
@@ -69,13 +70,6 @@ export default {
 
         form {
             @apply border-2;
-        }
-
-        a {
-            display: block;
-            text-align: center;
-            width: 100%;
-            margin-bottom: 2rem;
         }
     }
 }
