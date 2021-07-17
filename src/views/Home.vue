@@ -1,6 +1,6 @@
 <template>
     <main>
-        <Buttons />
+        <Buttons msg='message props'/>
     </main>
 </template>
 

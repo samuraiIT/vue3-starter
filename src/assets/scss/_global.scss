@@ -1,0 +1,17 @@
+#app {
+    font-family: $font__brand;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: $color__brand;
+}
+
+main {
+    padding: 3rem;
+    max-width: 900px;
+    margin: 0 auto; 
+}
+
+p + p {
+    margin-top: 1.25rem;
+}
