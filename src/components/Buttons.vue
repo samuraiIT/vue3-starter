@@ -1,11 +1,17 @@
 <template>
-    <h1 class="text-4xl mb-3">{{ msg }}</h1>
-    <button @click="increment()" class="button">{{$t('button.increase')}} 1</button>
-    <button @click="decrement()" class="button" style="background: #ffcd2a">
-       {{$t('button.increase')}} 1
+    <button v-if="role === 'increment'" @click="increment()" class="button">
+        {{ $t('button.increase') }} 1
     </button>
-    <br />
-    <span class="count">Total: {{ count }}</span>
+    <button
+        v-else-if="role === 'decrement'"
+        @click="decrement()"
+        class="button"
+        style="background: #ffcd2a"
+    >
+        {{ $t('button.increase') }} 1
+    </button>
+
+    total: {{ count }}
 </template>
 
 <script>
@@ -13,7 +19,7 @@ import { ref } from 'vue'
 
 export default {
     props: {
-        msg: '',
+        role: '',
     },
     setup() {
         let count = ref(0)
@@ -37,11 +43,11 @@ export default {
     display: inline-block;
     border-radius: 6px;
     padding: 8px 12px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #fff;
     background: #41b883;
-    margin: 0 8px 2rem;
+    margin: 0 8px 2rem 0;
 }
 
 .count {

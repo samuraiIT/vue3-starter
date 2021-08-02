@@ -1,14 +1,30 @@
 <template>
     <main>
-        <Buttons msg='message props'/>
+        <h1>Vue Sandbox</h1>
+        <section>
+            <h2>Button and passing props</h2>
+            <Buttons msg="message props" role="increment" />
+        </section>
+        <section>
+            <h2>V-model</h2>
+            <Vmodel />
+        </section>
+        <section>
+            <h2>V-model #2</h2>
+            <Colors />
+        </section>
     </main>
 </template>
 
 <script>
 import Buttons from '/@/components/Buttons.vue'
+import Vmodel from '/@/components/Vmodel.vue'
+import Colors from '/@/components/Colors.vue'
 export default {
     components: {
         Buttons,
+        Vmodel,
+        Colors,
     },
     setup() {
         return {}
@@ -16,4 +32,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+section {
+    max-width: 400px;
+    margin: 24px 0;
+    text-align: left;
+}
+</style>
