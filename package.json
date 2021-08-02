@@ -10,7 +10,7 @@
     "url": "https://github.com/maximedaraize/vue3-starter"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "serve": "vite preview"
   },
