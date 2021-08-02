@@ -6,18 +6,11 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/00cc2202-9470-43e9-b3a3-86d3849ecb8c/deploy-status)](https://app.netlify.com/sites/vue3-starter/deploys)
 
-
----
-
-**:warning: Note this is early WIP! Currently focus on making vue3-starter stable.**
-
 ---
 
 A Vue3 starter, powered by Vite and using Tailwind, I18n and Vue-router.
 
 ## [Demo](https://vue3-starter.netlify.app)
-
-
 
 ## Installation
 
@@ -33,7 +26,7 @@ cd app
   # With NPM
   npm i
   npm run dev
-  
+
   #With Yarn
   yarn
   yarn dev
