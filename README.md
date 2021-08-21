@@ -12,6 +12,12 @@ A Vue3 starter, powered by Vite and using Tailwind, I18n and Vue-router.
 
 ## [Demo](https://vue3-starter.netlify.app)
 
+## stackblitz
+Go to https://stackblitz.com/github/maximedaraize/vue3-starter
+
+and run the command `yarn dev` in the terminal
+
+
 ## Installation
 
 ```sh
