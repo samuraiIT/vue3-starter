@@ -28,43 +28,38 @@
     </header>
 </template>
 
-<script>
+<script setup>
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
-export default {
-    setup() {
-        const route = useRoute()
-        const lang = ref('en') //default lang of the site
-        const active = ref(true)
+const route = useRoute()
+const lang = ref('en') //default lang of the site
+const active = ref(true)
 
-        /**
-         * Set the value of lang accordingly
-         * to the meta value of the route
-         * Possible lang (fr,en)
-         */
-        watch(route, () => {
-            if (route.meta.lang !== 'en') {
-                lang.value = 'fr'
-            } else {
-                lang.value = 'en'
-            }
-        })
+/**
+ * Set the value of lang accordingly
+ * to the meta value of the route
+ * Possible lang (fr,en)
+ */
+watch(route, () => {
+    if (route.meta.lang !== 'en') {
+        lang.value = 'fr'
+    } else {
+        lang.value = 'en'
+    }
+})
 
-        const switchTo = lang => {
-            const routeName = route.name
-            if (routeName) {
-                const name = routeName.split('-')[0] // strip '-lang' from routeName.
-                return name ? { name: `${name}-${lang}` } : null
-            }
-            return {}
-        }
+const switchTo = lang => {
+    const routeName = route.name
+    if (routeName) {
+        const name = routeName.split('-')[0] // strip '-lang' from routeName.
+        return name ? { name: `${name}-${lang}` } : null
+    }
+    return {}
+}
 
-        const toggleLang = () => {
-            active.value = !active.value
-        }
-        return { route, switchTo, lang, active, toggleLang }
-    },
+const toggleLang = () => {
+    active.value = !active.value
 }
 </script>
 

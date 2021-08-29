@@ -3,14 +3,10 @@
     <p>Hello my name is {{ firstName }}</p>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
-export default {
-    setup() {
-        let firstName = ref('')
-        return { firstName }
-    },
-}
+
+const firstName = ref('')
 </script>
 
 <style lang="scss" scoped>

@@ -16,20 +16,10 @@
     </main>
 </template>
 
-<script>
+<script setup>
 import Buttons from '/@/components/Buttons.vue'
 import Vmodel from '/@/components/Vmodel.vue'
 import Colors from '/@/components/Colors.vue'
-export default {
-    components: {
-        Buttons,
-        Vmodel,
-        Colors,
-    },
-    setup() {
-        return {}
-    },
-}
 </script>
 
 <style scoped>
