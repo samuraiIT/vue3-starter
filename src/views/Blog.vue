@@ -26,11 +26,19 @@
                         </div>
                         <router-link
                             :to="{ name: `BlogDetail-${lang}`, params: { slug: post.slug } }"
-                            class="inline-block h-12 rounded-md mt-6 px-4 py-3 bg-black text-white font-bold"
-                           
+                            class="
+                                inline-block
+                                h-12
+                                rounded-md
+                                mt-6
+                                px-4
+                                py-3
+                                bg-black
+                                text-white
+                                font-bold
+                            "
                         >
-                   {{ $t('button.readMore') }}
-                           
+                            {{ $t('button.readMore') }}
                         </router-link>
                     </div>
                 </form>
@@ -39,15 +47,10 @@
     </main>
 </template>
 
-<script>
+<script setup>
 import { useLang } from '/@/composable/useLang'
-export default {
-    setup() {
-        const { route, data, dataEn, dataFr, lang } = useLang()
 
-        return { route, data, dataEn, dataFr, lang }
-    },
-}
+const { route, data, dataEn, dataFr, lang } = useLang()
 </script>
 
 <style lang="scss" scoped>

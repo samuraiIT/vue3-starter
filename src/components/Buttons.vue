@@ -14,27 +14,18 @@
     total: {{ count }}
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
+const props = defineProps({
+    role: String,
+})
 
-export default {
-    props: {
-        role: '',
-    },
-    setup() {
-        let count = ref(0)
-        const increment = () => {
-            count.value = count.value + 1
-        }
-        const decrement = () => {
-            count.value = count.value - 1
-        }
-        return {
-            count,
-            increment,
-            decrement,
-        }
-    },
+let count = ref(0)
+const increment = () => {
+    count.value = count.value + 1
+}
+const decrement = () => {
+    count.value = count.value - 1
 }
 </script>
 

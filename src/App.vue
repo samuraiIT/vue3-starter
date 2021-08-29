@@ -3,16 +3,8 @@
     <router-view />
 </template>
 
-<script>
+<script setup>
 import Navigation from '/@/components/Navigation.vue'
-export default {
-    components: {
-        Navigation,
-    },
-    setup() {
-        return {}
-    },
-}
 </script>
 
 <style lang="scss">

@@ -24,15 +24,10 @@
     </main>
 </template>
 
-<script>
+<script setup>
 import { useLang } from '/@/composable/useLang'
-export default {
-    setup() {
-        const { route, data, dataEn, dataFr, lang } = useLang()
 
-        return { route, data, dataEn, dataFr, lang }
-    },
-}
+const { route, data, dataEn, dataFr, lang } = useLang()
 </script>
 
 <style scoped></style>

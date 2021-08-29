@@ -6,15 +6,11 @@
     <div class="square" :style="{ backgroundColor: selection }"></div>
 </template>
 
-<script>
-import { ref, computed } from 'vue'
-export default {
-    setup() {
-        let colors = ref(['red', 'green', 'blue'])
-        let selection = ref(colors.value[0])
-        return { colors, selection }
-    },
-}
+<script setup>
+import { ref } from 'vue'
+
+let colors = ref(['red', 'green', 'blue'])
+let selection = ref(colors.value[0])
 </script>
 
 <style lang="scss" scoped>
